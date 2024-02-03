@@ -1,0 +1,17 @@
+
+font:
+  size: 16.5
+  normal:
+    family: JetBrainsMonoNerdFontMono
+
+window:
+  startup_mode: Fullscreen
+
+mouse:
+  hide_when_typing: true
+
+env:
+  TERM: xterm-256color
+
+import:
+  - ~/.config/alacritty/themes/themes/omni.yml 
