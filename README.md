@@ -11,7 +11,7 @@ Clone the repo into `$HOME` directory
 git clone https://github.com/0xMNT/dotfiles.git ~/dotfiles
 ```
 
-Run install script for arch based distro
+Run install script for `arch, btw` distro
 ```bash
 ./install.sh
 ```
