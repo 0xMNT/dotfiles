@@ -1,15 +1,28 @@
-# Install script for Arch, btw!
-## Prerequesites
+# Dotfiles
+
+![config image](./config.png)
+
+## Installing
+You will need to install `git`
+
+Clone the repo into `$HOME` directory
 
 ```bash
-sudo pacman -S git
+git clone https://github.com/0xMNT/dotfiles.git ~/dotfiles
 ```
-- clone repository to home folder
 
-# GNU stow
+Run install script for arch based distro
 ```bash
-stow <packagename> # activates symlink
-stow -n <packagename> # trial runs or simulates symlink 
-stow -D <packagename> # delete stowed package
-stow -R <packagename> # restows package
-``` 
+./install.sh
+```
+
+### GNU stow
+Create symlinks with `stow`
+
+```bash
+stow */ # all dirs
+```
+
+```bash
+stow alacritty # for one config
+```
