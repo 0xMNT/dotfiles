@@ -20,6 +20,7 @@ alias ls="exa --icons"
 alias l="ls -lah"
 alias tree="ls -Ta"
 alias lt="ls -Ta"
+alias s="systemctl"
 
 # starship
 eval "$(starship init bash)"
