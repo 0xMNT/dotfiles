@@ -21,6 +21,8 @@ alias l="ls -lah"
 alias tree="ls -Ta"
 alias lt="ls -Ta"
 alias s="systemctl"
+alias k="kubectl"
+alias m="minikube"
 
 # starship
 eval "$(starship init bash)"
