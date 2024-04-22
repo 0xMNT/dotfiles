@@ -1,0 +1,20 @@
+# perl gnu stow
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# aliases
+alias vim="nvim"
+
+alias py="python3"
+
+alias ls="exa --icons"
+alias l="ls -lah"
+alias lt="ls -Ta"
+alias tree="ls -Ta"
+
+alias s="systemctl"
+
+alias k="kubectl"
+alias m="minikube"
+
+alias ks="kill-session"
