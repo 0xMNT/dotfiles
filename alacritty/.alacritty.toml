@@ -8,8 +8,8 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [font]
-size = 15
-normal = { family = "JetBrainsMonoNerdFont" }
+size = 21
+normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 
 [window]
 startup_mode = "Fullscreen"
