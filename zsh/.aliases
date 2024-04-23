@@ -7,7 +7,7 @@ alias vim="nvim"
 
 alias py="python3"
 
-alias ls="exa --icons"
+alias ls="eza --icons"
 alias l="ls -lah"
 alias lt="ls -Ta"
 alias tree="ls -Ta"
@@ -17,4 +17,4 @@ alias s="systemctl"
 alias k="kubectl"
 alias m="minikube"
 
-alias ks="kill-session"
+alias tks="tmux kill-session"
