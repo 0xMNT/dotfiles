@@ -1,6 +1,6 @@
 # Dotfiles
 
-![config image](./config.png)
+![config image](./theme.png)
 
 ## Installing
 You will need to install `git`
