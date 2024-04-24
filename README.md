@@ -2,7 +2,16 @@
 
 ![config image](./theme.png)
 
-## Installing
+## Overview
+
+[Gooey (Gogh)](https://wezfurlong.org/wezterm/colorschemes/g/index.html#gooey-gogh)
+[WezTerm](https://wezfurlong.org/wezterm/)
+[zsh](https://ohmyz.sh/)
+[neovim](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[tmux](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+
+### Installing
 You will need to install `git`
 
 Clone the repo into `$HOME` directory
@@ -26,3 +35,5 @@ stow */ # all dirs
 ```bash
 stow alacritty # for one config
 ```
+
+The `theme`is called `Gooey`
