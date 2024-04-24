@@ -5,6 +5,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -65,7 +67,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	zsh-autosuggestions
+	z
+	kube-ps1
+	kubectl
+	helm
+	terraform
+	aws
+	docker
+	ansible
+	archlinux
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,4 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+PROMPT='$(kube_ps1)'$PROMPT
+
 eval "$(starship init zsh)"
