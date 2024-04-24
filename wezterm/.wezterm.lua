@@ -9,7 +9,6 @@ config.color_scheme = "Gooey (Gogh)"
 config.font = wezterm.font("JetBrains Mono", { weight = "Light" })
 config.font_size = 20
 
--- config.window_decorations = "NONE"
 config.window_padding = {
 	left = 0,
 	right = 0,
