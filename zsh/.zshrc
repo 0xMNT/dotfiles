@@ -71,6 +71,14 @@ plugins=(
 	git
 	zsh-autosuggestions
 	z
+	kube-ps1
+	kubectl
+	helm
+	terraform
+	aws
+	docker
+	ansible
+	archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,4 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+PROMPT='$(kube_ps1)'$PROMPT
+
 eval "$(starship init zsh)"
