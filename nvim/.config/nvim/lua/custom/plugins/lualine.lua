@@ -29,9 +29,6 @@ return {
       },
     }
 
-    local custom = require 'lualine.themes.nightfly'
-    custom.normal.c.bg = '#ffffff'
-
     require('lualine').setup {
       options = {
         theme = 'auto',
