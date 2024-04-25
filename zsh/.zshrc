@@ -1,4 +1,3 @@
-source ~/.aliases
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -6,6 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+export BAT_THEME="TwoDark"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -109,6 +109,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+#
+
+# source aliases at the end to override other aliases
+source ~/.aliases
+
 PROMPT='$(kube_ps1)'$PROMPT
 
 eval "$(starship init zsh)"
