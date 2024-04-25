@@ -768,8 +768,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 
-  -- require 'custom.plugins.bufferline',
-  -- require 'custom.plugins.neotree',
+  require 'custom.plugins.bufferline',
+  require 'custom.plugins.neotree',
   require 'custom.plugins.colorscheme',
   require 'custom.plugins.oil',
   require 'custom.plugins.noice',

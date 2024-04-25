@@ -28,6 +28,7 @@ return {
         c = { fg = colors.white },
       },
     }
+
     require('lualine').setup {
       options = {
         theme = 'auto',
