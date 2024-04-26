@@ -807,4 +807,4 @@ require('lazy').setup({
 -- vim.opt.laststatus = 0
 
 -- vim.opt.termguicolors = true
-vim.g.lazygit_floating_window_scaling_factor = 0.5
+vim.g.lazygit_floating_window_scaling_factor = 1
