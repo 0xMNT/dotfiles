@@ -655,7 +655,6 @@ require('lazy').setup({
       }
     end,
   },
-
   -- { -- You can easily change to a different colorscheme.
   --   -- Change the name of the colorscheme plugin below, and then
   --   -- change the command in the config to whatever the name of that colorscheme is.
@@ -774,6 +773,7 @@ require('lazy').setup({
   require 'custom.plugins.oil',
   require 'custom.plugins.noice',
   require 'custom.plugins.lualine',
+  require 'custom.plugins.lazygit-nvim',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -807,3 +807,4 @@ require('lazy').setup({
 -- vim.opt.laststatus = 0
 
 -- vim.opt.termguicolors = true
+vim.g.lazygit_floating_window_scaling_factor = 0.5
