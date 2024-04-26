@@ -747,6 +747,7 @@ require('lazy').setup({
   require 'custom.plugins.noice',
   require 'custom.plugins.lualine',
   require 'custom.plugins.lazygit-nvim',
+  require 'custom.plugins.notify',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
