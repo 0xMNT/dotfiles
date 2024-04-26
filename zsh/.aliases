@@ -2,7 +2,6 @@
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# aliases
 alias vim="nvim"
 
 alias py="python3"
@@ -17,4 +16,6 @@ alias s="systemctl"
 alias k="kubectl"
 alias m="minikube"
 
-alias tks="tmux kill-session"
+alias tks="tmux kill-server"
+
+alias lg="lazygit"
