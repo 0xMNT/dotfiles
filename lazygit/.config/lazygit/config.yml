@@ -3,3 +3,5 @@ gui:
     selectedLineBgColor:
       - "#1f2741"
 
+os:
+  editPreset: 'nvim'
