@@ -111,6 +111,9 @@ source $ZSH/oh-my-zsh.sh
 #
 #
 
+# change lualine config dir
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # source aliases at the end to override other aliases
 source ~/.aliases
 
