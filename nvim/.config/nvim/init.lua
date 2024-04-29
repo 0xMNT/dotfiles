@@ -749,6 +749,7 @@ require('lazy').setup({
   require 'custom.plugins.lazygit-nvim',
   require 'custom.plugins.notify',
   require 'custom.plugins.python_code_runner',
+  require 'custom.plugins.auto-session',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
