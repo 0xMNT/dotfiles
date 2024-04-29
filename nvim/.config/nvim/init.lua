@@ -201,7 +201,7 @@ require('lazy').setup({
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        -- ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -400,7 +400,7 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
-          map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+          -- map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
@@ -798,3 +798,25 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.formatoptions:remove { 'r', 'o' }
   end,
 })
+
+-- save, quit
+vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
+vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
+
+-- ignore capitalization mistakes
+vim.cmd 'ca W w'
+vim.cmd 'ca Q q'
+vim.cmd 'ca WQ wq'
+vim.cmd 'ca Wq wq'
+
+-- windows
+vim.keymap.set('n', '<leader><left>', ':vertical resize +20<cr>')
+vim.keymap.set('n', '<leader><right>', ':vertical resize -20<cr>')
+vim.keymap.set('n', '<leader><up>', ':resize +10<cr>')
+vim.keymap.set('n', '<leader><down>', ':resize -10<cr>')
+
+-- delete without yanking
+vim.keymap.set({ 'n', 'v' }, 'd', [["_d]])
+
+-- disable the Q command
+vim.keymap.set('n', 'Q', '<nop>')
