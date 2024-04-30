@@ -787,8 +787,9 @@ require('lazy').setup({
 vim.g.lazygit_floating_window_scaling_factor = 1
 
 -- buffer
-vim.keymap.set('n', '<leader>n', '<cmd>bn<CR>')
-vim.keymap.set('n', '<leader>p', '<cmd>bp<CR>')
+-- vim.keymap.set('n', '<leader>n', '<cmd>bn<CR>')
+vim.keymap.set('n', '<TAB>', '<cmd>bn<CR>')
+vim.keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
 vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>')
 
 -- prevent commenting out next line

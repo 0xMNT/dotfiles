@@ -3,22 +3,23 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local colors = {
-      blue = '#ffffff',
-      cyan = '#ffffff',
-      black = '#080808',
-      white = '#ffffff',
-      red = '#ffffff',
-      violet = '#ffffff',
-      grey = '#ffffff',
+      blue = '#80a0ff',
+      cyan = '#79dac8',
+      black = '#0D101B',
+      white = '#77777',
+      red = '#ff5189',
+      violet = '#C0B7F9',
+      grey = '#1f2741',
     }
-    local bubbles = {
+
+    local bubbles_theme = {
       normal = {
-        a = { fg = colors.black, bg = colors.violet },
+        a = { fg = colors.black, bg = colors.blue },
         b = { fg = colors.white, bg = colors.grey },
         c = { fg = colors.white },
       },
 
-      insert = { a = { fg = colors.black, bg = colors.blue } },
+      insert = { a = { fg = colors.black, bg = colors.violet } },
       visual = { a = { fg = colors.black, bg = colors.cyan } },
       replace = { a = { fg = colors.black, bg = colors.red } },
 
@@ -31,7 +32,7 @@ return {
 
     require('lualine').setup {
       options = {
-        theme = 'auto',
+        theme = bubbles_theme,
         component_separators = '',
         section_separators = { left = '', right = '' },
       },
