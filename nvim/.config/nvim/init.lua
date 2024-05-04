@@ -457,7 +457,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -619,12 +619,12 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<Space>'] = cmp.mapping.confirm { select = true },
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
           --  completions whenever it has completion options available.
-          ['<C-Space>'] = cmp.mapping.complete {},
+          -- ['<C-Space>'] = cmp.mapping.complete {},
 
           -- Think of <c-l> as moving to the right of your snippet expansion.
           --  So if you have a snippet that's like:
@@ -790,7 +790,7 @@ vim.g.lazygit_floating_window_scaling_factor = 1
 -- vim.keymap.set('n', '<leader>n', '<cmd>bn<CR>')
 vim.keymap.set('n', '<TAB>', '<cmd>bn<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
-vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>')
+vim.keymap.set('n', 'q', '<cmd>bd<CR>')
 
 -- prevent commenting out next line
 vim.api.nvim_create_autocmd('FileType', {
