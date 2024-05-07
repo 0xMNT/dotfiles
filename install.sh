@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-sudo pacman -Sy zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship;
+sudo pacman -Sy easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship;
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
