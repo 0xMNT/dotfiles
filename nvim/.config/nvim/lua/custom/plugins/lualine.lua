@@ -9,7 +9,7 @@ return {
       white = '#77777',
       red = '#ff5189',
       violet = '#C0B7F9',
-      grey = '#1f2741',
+      grey = '#131313',
     }
 
     local bubbles_theme = {
