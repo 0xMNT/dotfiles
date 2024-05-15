@@ -19,3 +19,5 @@ alias m="minikube"
 alias tks="tmux kill-server"
 
 alias lg="lazygit"
+
+alias ff="fastfetch"
