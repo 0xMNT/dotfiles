@@ -21,3 +21,4 @@ alias tks="tmux kill-server"
 alias lg="lazygit"
 
 alias ff="fastfetch"
+alias suu="sudo pacman -Syu"
