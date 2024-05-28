@@ -790,7 +790,7 @@ vim.g.lazygit_floating_window_scaling_factor = 1
 -- vim.keymap.set('n', '<leader>n', '<cmd>bn<CR>')
 vim.keymap.set('n', '<TAB>', '<cmd>bn<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bp<CR>')
-vim.keymap.set('n', 'q', '<cmd>bd<CR>')
+vim.keymap.set('n', '<leader>x', '<cmd>bd<CR>')
 
 -- prevent commenting out next line
 vim.api.nvim_create_autocmd('FileType', {
