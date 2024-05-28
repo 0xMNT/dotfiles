@@ -6,7 +6,7 @@ alias vim="nvim"
 
 alias py="python3"
 
-alias ls="eza --icons"
+alias ls="eza --icons -a"
 alias l="ls -lah"
 alias lt="ls -Ta"
 alias tree="ls -Ta"
