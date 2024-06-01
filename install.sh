@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-sudo pacman -Sy fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship;
+yes | sudo pacman -Sy fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
@@ -11,3 +11,6 @@ fc-cache
 
 # tmux 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# yay
+yes | sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
