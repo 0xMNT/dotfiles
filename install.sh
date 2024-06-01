@@ -12,5 +12,3 @@ fc-cache
 # tmux 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# yay
-yes | sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
