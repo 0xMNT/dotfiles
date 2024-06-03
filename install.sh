@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-yes | sudo pacman -Sy fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
+yes | sudo pacman -Sy mangohud nvidia lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
@@ -12,3 +12,8 @@ fc-cache
 # tmux 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# oh-my-zsh
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# zsh autosuggestion
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
