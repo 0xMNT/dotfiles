@@ -1,1 +1,2 @@
 systemd/.config/systemd/user/pipewire.service.wants/
+nvim/.config/lazy-lock.json
