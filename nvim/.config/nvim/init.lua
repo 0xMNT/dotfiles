@@ -459,6 +459,7 @@ require('lazy').setup({
         -- gopls = {},
         -- pyright = {},
         tflint = {},
+        terraformls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -543,8 +544,9 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        terraform = { 'terraform_fmt' },
         -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
@@ -742,7 +744,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 
-  -- require 'custom.plugins.bufferline',
+  require 'custom.plugins.bufferline',
   require 'custom.plugins.neotree',
   require 'custom.plugins.colorscheme',
   require 'custom.plugins.oil',
