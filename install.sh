@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-yes | sudo pacman -Sy docker mangohud nvidia lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
+yes | sudo pacman -Sy docker mangohud nvidia nvidia-utils lib32-nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
@@ -20,6 +20,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # add user to docker group
 sudo usermod -aG docker $USER
-
-# apply group changes
 newgrp docker
+
+# generate xconfig for nvidia driver
+sudo nvidia-xconfig
+sudo mkinitcpio -P
