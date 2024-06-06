@@ -741,7 +741,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
 
-  require 'custom.plugins.bufferline',
+  -- require 'custom.plugins.bufferline',
   require 'custom.plugins.neotree',
   require 'custom.plugins.colorscheme',
   require 'custom.plugins.oil',
@@ -749,7 +749,7 @@ require('lazy').setup({
   require 'custom.plugins.lualine',
   require 'custom.plugins.lazygit-nvim',
   require 'custom.plugins.notify',
-  require 'custom.plugins.python_code_runner',
+  -- require 'custom.plugins.python_code_runner',
   require 'custom.plugins.auto-session',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
