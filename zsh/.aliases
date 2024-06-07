@@ -23,3 +23,5 @@ alias ld="lazydocker"
 
 alias ff="fastfetch"
 alias suu="sudo pacman -Syu"
+
+alias sonnen="gh repo clone $(gh repo list sonnen L -200 | awk '{print $1}' | fzf)"
