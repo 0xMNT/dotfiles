@@ -820,7 +820,7 @@ vim.keymap.set('n', '<leader><up>', ':resize +10<cr>')
 vim.keymap.set('n', '<leader><down>', ':resize -10<cr>')
 
 -- delete without yanking
-vim.keymap.set({ 'n', 'v' }, 'd', [["_d]])
+vim.keymap.set({ 'n', 'v' }, 'D', [["_d]])
 
 -- disable the Q command
 vim.keymap.set('n', 'Q', '<nop>')

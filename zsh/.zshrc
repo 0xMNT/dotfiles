@@ -79,6 +79,7 @@ plugins=(
 	docker
 	ansible
 	archlinux
+	fzf
 )
 
 source $ZSH/oh-my-zsh.sh
