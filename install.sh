@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # packages
-yes | sudo pacman -Sy github-cli aws-cli docker mangohud nvidia nvidia-utils lib32-nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
+yes | sudo pacman -Sy man github-cli aws-cli docker mangohud nvidia nvidia-utils lib32-nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
