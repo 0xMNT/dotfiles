@@ -1,6 +1,6 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
+#import = [
+#  "~/.config/alacritty/catppuccin-mocha.toml"
+#]
 
 live_config_reload = true 
 
@@ -12,7 +12,7 @@ size = 21
 normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 
 [window]
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 
 [mouse]
 hide_when_typing = true
