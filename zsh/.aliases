@@ -22,9 +22,11 @@ alias lg="lazygit"
 alias ld="lazydocker"
 
 alias ff="fastfetch"
-alias suu="sudo pacman -Syu"
+alias suu="sudo pacman -Syu -y"
 
 alias repos="gh repo clone \$(gh repo list | awk '{print \$1}' | fzf)"
 alias sonnen="gh repo clone \$(gh repo list sonnen -L 200 | awk '{print \$1}' | fzf)"
 
 alias ip="ip -c -br"
+
+alias bar="./Downloads/Beyond-All-Reason-1.2988.0.appimage"
