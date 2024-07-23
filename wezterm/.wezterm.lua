@@ -3,6 +3,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 -- local mux = wezterm.mux
 
+config.audible_bell = "Disabled"
+
 config.enable_tab_bar = false
 config.color_scheme = "Gooey (Gogh)"
 
