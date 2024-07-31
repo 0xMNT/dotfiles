@@ -119,6 +119,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 source ~/.aliases
 source ~/.zshenv
 
+# Check if .env file exists in the current directory and source it
+if [ -f ~/.env ]; then
+  export $(grep -v '^#' ~/.env | xargs)
+fi
+
 PROMPT='$(kube_ps1)'$PROMPT
 
 # Check if we are already inside a tmux session
