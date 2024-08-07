@@ -127,9 +127,9 @@ fi
 PROMPT='$(kube_ps1)'$PROMPT
 
 # Check if we are already inside a tmux session
-if [ -z "$TMUX" ]; then
-  # Start a new tmux session or attach to an existing one
-  tmux attach -t dotfiles || tmux new -s dotfiles
-fi
+# if [ -z "$TMUX" ]; then
+#   # Start a new tmux session or attach to an existing one
+#   tmux attach -t dotfiles || tmux new -s dotfiles
+# fi
 
 eval "$(starship init zsh)"
