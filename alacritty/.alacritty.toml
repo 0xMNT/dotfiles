@@ -8,7 +8,7 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [font]
-size = 21
+size = 22
 normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
 
 [window]
