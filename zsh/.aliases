@@ -27,3 +27,5 @@ alias suu="sudo pacman -Syu -y"
 alias repos="gh repo clone \$(gh repo list 0xmnt | awk '{print \$1}' | fzf)"
 
 alias ip="ip -c -br"
+
+alias ns="kubectl config set-context --current --namespace=\$(kubectl get ns | awk '{print \$1}' | fzf)"
