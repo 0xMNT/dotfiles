@@ -80,6 +80,7 @@ plugins=(
 	ansible
 	archlinux
 	fzf
+	argocd
 )
 
 source $ZSH/oh-my-zsh.sh
