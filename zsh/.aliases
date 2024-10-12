@@ -46,3 +46,16 @@ ns() {
     kubectl config set-context --current --namespace="$ns"
 }
 
+kc() {
+    local cluster
+
+    if [[ -z "$1" ]]; then
+        cluster=$(kubectl config get-clusters | tail -n +2 | fzf --height 15 --border --prompt="Select a cluster: ")
+
+    else
+        cluster=$1
+    fi
+
+    # Set the current context to the selected or provided cluster
+    kubectl config set-context --current --cluster="$cluster"
+}
