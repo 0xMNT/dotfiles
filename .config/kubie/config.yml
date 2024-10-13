@@ -1,0 +1,5 @@
+# Example config.yml
+prompt:
+  context: "magenta"  # Set color for the context (options: red, green, yellow, blue, magenta, cyan, white)
+  namespace: "yellow"  # Set color for the namespace
+
