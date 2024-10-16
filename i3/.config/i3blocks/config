@@ -1,0 +1,21 @@
+full_text=|
+align=center
+color=#f3f3f3
+separator=false
+separator_block_width=7
+
+[audio]
+command=~/.config/i3/scripts/audio_level.sh
+interval=1
+
+[seperator]
+
+[date]
+command=date '+%d.%m.%Y' 
+interval=60  # Update every minute
+
+[seperator]
+
+[time]
+command=date '+%H:%M'
+interval=5  # Update every 5 seconds
