@@ -164,7 +164,14 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 exec_always --no-startup-id ~/.config/i3/scripts/mouse_speed.sh
 
 # set audio output
-exec --no-startup-id pactl set-default-sink 54
+exec_always --no-startup-id sh -c "pactl set-default-sink $(pactl list short sinks | grep analog | awk '{print $1}')"
 
 # set display res and refresh rate
 exec --no-startup-id xrandr --output DP-2 --mode 2560x1440 --rate 75
+
+# caps to esc
+exec --no-startup-id setxkbmap -option caps:escape
+
+# key repeat speed
+exec --no-startup-id xset r rate 300 40
+
