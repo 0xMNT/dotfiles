@@ -12,6 +12,7 @@ alias lt="ls -Ta"
 alias tree="ls -Ta"
 
 alias s="systemctl"
+alias sd="shutdown now"
 
 alias k="kubectl"
 alias m="minikube"
