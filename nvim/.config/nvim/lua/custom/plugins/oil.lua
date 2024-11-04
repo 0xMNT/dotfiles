@@ -11,6 +11,7 @@ return {
       keymaps = {
         ['<C-h>'] = false, -- disable Ctrl-h keybinding
         ['<C-l>'] = false, -- disable Ctrl-l keybinding
+        ['<C-j>'] = false, -- disable Ctrl-l keybinding
       },
     }
   end,
