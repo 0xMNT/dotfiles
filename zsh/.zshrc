@@ -132,4 +132,13 @@ PROMPT='$(kube_ps1)'$PROMPT
 #   tmux attach -t dotfiles || tmux new -s dotfiles
 # fi
 
+# source virtual environment for ansible
+source /home/dcielenga/repos/k8s-ansible/.venv/bin/activate
+
+# Automatically attach to tmux when logging in via SSH
+if [[ -z "$TMUX" ]]; then
+  tmux attach || tmux new
+fi
+
+
 eval "$(starship init zsh)"
