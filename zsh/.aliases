@@ -2,6 +2,8 @@
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+alias ans="cd ~/repos/k8s-ansible/"
+
 alias vim="nvim"
 
 alias py="python3"
@@ -35,6 +37,12 @@ ns() {
         # Use fzf to select a namespace interactively
         ns=$(kubectl get ns | awk '{print $1}' | tail -n +2 | fzf --height 15 --border --prompt="Select a namespace: ") 
 
+ns() {
+    local ns
+    if [[ -z "$1" ]]; then
+        # Use fzf to select a namespace interactively
+        ns=$(kubectl get ns | awk '{print $1}' | tail -n +2 | fzf --height 25 --border --prompt="Select a namespace: ") 
+
         # If no namespace is selected, get the current namespace
         if [[ -z "$ns" ]]; then
             ns=$(kubectl config view --minify --output 'jsonpath={..namespace}')
@@ -47,16 +55,17 @@ ns() {
     kubectl config set-context --current --namespace="$ns"
 }
 
-kc() {
-    local cluster
-
-    if [[ -z "$1" ]]; then
-        cluster=$(kubectl config get-clusters | tail -n +2 | fzf --height 15 --border --prompt="Select a cluster: ")
-
-    else
-        cluster=$1
-    fi
-
-    # Set the current context to the selected or provided cluster
-    kubectl config set-context --current --cluster="$cluster"
-}
+#
+# kc() {
+#     local cluster
+#
+#     if [[ -z "$1" ]]; then
+#         cluster=$(kubectl config get-clusters | tail -n +2 | fzf --height 15 --border --prompt="Select a cluster: ")
+#
+#     else
+#         cluster=$1
+#     fi
+#
+#     # Set the current context to the selected or provided cluster
+#     kubectl config set-context --current --cluster="$cluster"
+# }
