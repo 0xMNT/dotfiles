@@ -8,6 +8,10 @@ return {
       view_options = {
         show_hidden = true,
       },
+      keymaps = {
+        ['<C-h>'] = false, -- disable Ctrl-h keybinding
+        ['<C-l>'] = false, -- disable Ctrl-l keybinding
+      },
     }
   end,
 
