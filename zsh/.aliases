@@ -31,6 +31,8 @@ alias repos="gh repo clone \$(gh repo list 0xmnt | awk '{print \$1}' | fzf)"
 
 alias ip="ip -c -br"
 
+alias t="talosctl"
+
 ns() {
     local ns
     if [[ -z "$1" ]]; then
