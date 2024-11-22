@@ -116,8 +116,14 @@ source $ZSH/oh-my-zsh.sh
 # change lualine config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# Editor
+export EDITOR="nvim"
+
 # source aliases at the end to override other aliases
 source ~/.aliases
+
+# source exports
+source ~/.exports
 
 # Check if .env file exists in the current directory and source it
 if [ -f ~/.env ]; then
