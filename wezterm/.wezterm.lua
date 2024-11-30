@@ -7,8 +7,9 @@ config.audible_bell = "Disabled"
 config.enable_tab_bar = false
 config.color_scheme = "Gooey (Gogh)"
 
-config.font = wezterm.font("JetBrains Mono", { weight = "Light" })
+config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" })
 config.font_size = 18
+config.enable_kitty_graphics = true
 
 config.window_decorations = "NONE"
 config.window_padding = {
