@@ -7,6 +7,13 @@ ZSH_THEME="robbyrussell"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
 export BAT_THEME="TwoDark"
 
+
+# Tmux attach
+# tmux attach session
+if [ -z "$TMUX" ]; then
+    tmux attach || tmux new-session
+fi
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
