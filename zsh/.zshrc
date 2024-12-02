@@ -148,7 +148,7 @@ PROMPT='$(kube_ps1)'$PROMPT
 autoload -U compinit
 compinit
 
-source <(talosctl completion zsh)
+#source <(talosctl completion zsh)
 
 
 eval "$(starship init zsh)"
