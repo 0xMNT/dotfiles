@@ -199,7 +199,7 @@ require('lazy').setup({
       require('which-key').register {
         ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
         ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
+        -- ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         -- ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
       }
@@ -404,7 +404,7 @@ require('lazy').setup({
 
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+          -- map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
@@ -471,16 +471,40 @@ require('lazy').setup({
         --
 
         lua_ls = {
-          -- cmd = {...},
-          -- filetypes = { ...},
-          -- capabilities = {},
+          -- mason = false, -- set to false if you don't want this server to be installed with mason
+          -- Use this to add any additional keymaps
+          -- for specific lsp servers
+          -- ---@type LazyKeysSpec[]
+          -- keys = {},
           settings = {
             Lua = {
+              workspace = {
+                checkThirdParty = false,
+                telemetry = {
+                  enable = false,
+                },
+                library = {
+                  '${3rd}/love2d/library',
+                  '$HOME/mnt',
+                },
+              },
+              codeLens = {
+                enable = true,
+              },
               completion = {
                 callSnippet = 'Replace',
               },
-              -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              doc = {
+                privateName = { '^_' },
+              },
+              hint = {
+                enable = true,
+                setType = false,
+                paramType = true,
+                paramName = 'Disable',
+                semicolon = 'Disable',
+                arrayIndex = 'Disable',
+              },
             },
           },
         },
@@ -803,9 +827,17 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+vim.api.nvim_create_autocmd('TermOpen', {
+  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+  callback = function()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+  end,
+})
+
 -- save, quit
-vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
-vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
+-- vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
+-- vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
 
 -- ignore capitalization mistakes
 vim.cmd 'ca W w'
@@ -824,3 +856,7 @@ vim.keymap.set('n', '<leader><down>', ':resize -10<cr>')
 
 -- disable the Q command
 vim.keymap.set('n', 'Q', '<nop>')
+
+-- run lua code
+vim.keymap.set('n', '<leader>w', ':w <CR> :vsp | term lua %<CR>', { desc = 'Run Lua File in Split Terminal' })
+vim.keymap.set('n', '<leader>r', ':w <CR> :vsp | term love .<CR>', { desc = '[R]un Love2d File in Split Terminal' })
