@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux -- fullscreen
 
 local config = wezterm.config_builder()
 
@@ -8,7 +9,7 @@ config.enable_tab_bar = false
 config.color_scheme = "Gooey (Gogh)"
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" })
-config.font_size = 17
+config.font_size = 16
 config.enable_kitty_graphics = true
 
 config.window_decorations = "NONE"
@@ -19,9 +20,10 @@ config.window_padding = {
 	bottom = 0,
 }
 
--- wezterm.on("gui-startup", function()
--- 	local tab, pane, window = mux.spawn_window({})
--- 	window:gui_window():maximize()
--- end)
+wezterm.on("gui-startup", function(window)
+	local tab, pane, window = mux.spawn_window(cmd or {})
+	local gui_window = window:gui_window()
+	gui_window:perform_action(wezterm.action.ToggleFullScreen, pane)
+end)
 
 return config
