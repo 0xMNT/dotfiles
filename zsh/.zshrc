@@ -1,12 +1,18 @@
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white"
+# Enable completion
+autoload -U compinit
+compinit
+
+# Set autocompletion color options
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
+
 export BAT_THEME="TwoDark"
 
+source /home/dcielenga/repos/k8s-ansible/.venv/bin/activate
 
 # Tmux attach
 # tmux attach session
@@ -144,9 +150,6 @@ PROMPT='$(kube_ps1)'$PROMPT
 #   # Start a new tmux session or attach to an existing one
 #   tmux attach -t dotfiles || tmux new -s dotfiles
 # fi
-
-autoload -U compinit
-compinit
 
 #source <(talosctl completion zsh)
 
