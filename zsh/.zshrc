@@ -8,7 +8,7 @@ autoload -U compinit
 compinit
 
 # Set autocompletion color options
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=240"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
 export BAT_THEME="TwoDark"
 
