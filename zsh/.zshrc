@@ -12,8 +12,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
 export BAT_THEME="TwoDark"
 
-source /home/dcielenga/repos/k8s-ansible/.venv/bin/activate
-
 # Tmux attach
 # tmux attach session
 if [ -z "$TMUX" ]; then
