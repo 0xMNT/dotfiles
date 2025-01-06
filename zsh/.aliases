@@ -36,3 +36,5 @@ alias ns="kubens"
 alias kc="kccon \$(kccon | tr '*' ' ' | egrep -v 'NAME' | awk '{print \$1}' | fzf)"
 
 alias k9s="k9s --kubeconfig /etc/k8s/config -c ctx"
+
+alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
