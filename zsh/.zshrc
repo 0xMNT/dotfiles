@@ -132,9 +132,8 @@ export EDITOR="nvim"
 
 # source aliases at the end to override other aliases
 source ~/.aliases
-
-# source exports
 source ~/.exports
+source ~/.sources
 
 # Check if .env file exists in the current directory and source it
 if [ -f ~/.env ]; then
