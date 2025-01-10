@@ -38,3 +38,5 @@ alias kc="kccon \$(kccon | tr '*' ' ' | egrep -v 'NAME' | awk '{print \$1}' | fz
 alias k9s="k9s --kubeconfig /etc/k8s/config -c ctx"
 
 alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
+
+alias tk="tmux kill-session -t \$(tmux ls |awk -F: '{print \$1}' | fzf)"
