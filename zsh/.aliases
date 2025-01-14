@@ -40,3 +40,5 @@ alias k9s="k9s --kubeconfig /etc/k8s/config -c ctx"
 alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
 
 alias tk="tmux kill-session -t \$(tmux ls |awk -F: '{print \$1}' | fzf)"
+
+alias debug='kubectl run -it --rm curl-telnet-pod --image=alpine:latest -- sh -c "apk add --no-cache curl busybox-extras && sh"'
