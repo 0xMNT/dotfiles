@@ -122,7 +122,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-#
+# krew path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # change lualine config dir
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -149,6 +150,6 @@ PROMPT='$(kube_ps1)'$PROMPT
 # fi
 
 #source <(talosctl completion zsh)
-
+source <(kubectl completion zsh)
 
 eval "$(starship init zsh)"
