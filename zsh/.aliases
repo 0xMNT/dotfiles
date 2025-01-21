@@ -41,5 +41,4 @@ alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
 
 alias tk="tmux kill-session -t \$(tmux ls |awk -F: '{print \$1}' | fzf)"
 
-alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest -- sh -c "apk add --no-cache curl busybox-extras nmap && sh"'
-alias debug=' kubectl run -it --rm debug-pod-damian --image=alpine:latest --annotations="sidecar.istio.io/inject=false" -- sh -c "apk add --no-cache curl busybox-extras nmap && sh"'
+alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest --annotations="sidecar.istio.io/inject=false" -- sh -c "apk add --no-cache curl busybox-extras nmap && sh"'
