@@ -1,5 +1,6 @@
+#🐢
 [kubernetes]
-format = 'on [🐋 $context \($namespace\)](white) '
+format = 'on [🐏 $context \($namespace\)](white) '
 disabled = false
 contexts = [
   { context_pattern = "dev.local.cluster.k8s", style = "white", symbol = "💔 " },
