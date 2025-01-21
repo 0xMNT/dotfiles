@@ -1,0 +1,7 @@
+background = "#0D101B"
+font-family = "JetBrainsMono Nerd Font"
+font-size = 22
+title = ""
+window-decoration = false
+
+keybind = ctrl+shift+k=reload_config
