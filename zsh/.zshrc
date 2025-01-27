@@ -128,6 +128,8 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # change lualine config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
+source ~/.env
+
 # Editor
 export EDITOR="nvim"
 
