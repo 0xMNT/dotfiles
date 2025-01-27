@@ -35,10 +35,11 @@ alias ns="kubens"
 
 alias kc="kccon \$(kccon | tr '*' ' ' | egrep -v 'NAME' | awk '{print \$1}' | fzf)"
 
-alias k9s="k9s --kubeconfig /etc/k8s/config -c pods"
+# alias k9s="k9s --kubeconfig /etc/k8s/config -c pods"
+alias k9s="k9s -c namespace"
 
 alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
 
 alias tk="tmux kill-session -t \$(tmux ls |awk -F: '{print \$1}' | fzf)"
 
-alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest --annotations="sidecar.istio.io/inject=false" -- sh -c "apk add --no-cache curl busybox-extras nmap && sh"'
+alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest --annotations="sidecar.istio.io/inject=false" -- sh -c "apk add --no-cache bash curl busybox-extras nmap && bash"'
