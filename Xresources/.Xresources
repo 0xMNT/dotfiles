@@ -3,9 +3,13 @@
 !150% 144
 !125% 120
 !100% 96
-*dpi: 144
-Xft.dpi: 144
+! *dpi: 144
+! Xft.dpi: 144
 
 ! Xcursor.theme: Adwaita
 ! 16, 24, 32, 48 or 64 may also be good size.
-Xcursor.size: 32
+! Xcursor.size: 32
+
+
+Xcursor.theme: Adwaita
+Xcursor.size: 20
