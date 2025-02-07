@@ -1,0 +1,69 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/media"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "custom/microphone", "clock"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "hyprctl dispatch workspace {name}",
+    "all-outputs": true
+  },
+
+  "window": {
+    "max-length": 50
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M:%S}"
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "cpu": {
+    "format": "CPU: {usage}%"
+  },
+
+  "memory": {
+    "format": "RAM: {}%"
+  },
+
+  "network": {
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": " {ipaddr}/{cidr}",
+    "format-disconnected": "Disconnected"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": " Muted",
+    "on-click": "pamixer -t", // Mute/unmute on click
+    "on-scroll-up": "pamixer -i 5", // Increase volume by 5%
+    "on-scroll-down": "pamixer -d 5" // Decrease volume by 5%
+  },
+
+  "custom/media": {
+    "exec": "playerctl metadata --format '{\"text\": \"🎵 {{artist}} - {{title}}\"}' || echo '{\"text\": \"\", \"tooltip\": false}'",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/microphone": {
+    "exec": "pactl list sources | grep -e 'Name' -e 'Mute' | awk '/Mute/ {print $2}' | head -n 1 | jq -R '{ \"text\": . }' || echo '{\"text\": \"🎤 No Mic\"}'",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "format": "🎤 {text}",
+    "format-muted": "🎤 MUTE"
+  },
+
+}
+
