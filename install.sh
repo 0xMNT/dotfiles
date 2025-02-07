@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # packages
-yes | sudo pacman -Sy swayidle kubectx ripgrep-all mpv yq tldr nushell argocd helm kubectl man github-cli aws-cli docker mangohud nvidia nvidia-utils lib32-nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
+yes | sudo pacman -Sy xdg-desktop-portal-wlr grim slurp wl-clipboard libnotify waybar swayidle kubectx ripgrep-all mpv jq yq tldr nushell argocd helm kubectl man github-cli aws-cli docker mangohud nvidia nvidia-utils lib32-nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship
 
 # jetbrains mono nerd font
 mkdir -p ~/.fonts
-wget -O ~/.fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+wget -O ~/.fonts/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip
 unzip ~/.fonts/JetBrainsMono.zip -d ~/.fonts
 fc-cache
 
