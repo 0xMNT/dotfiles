@@ -4,13 +4,13 @@
 }
 
 window#waybar {
-    background: #282c34;
+    background: #0D101B;
     color: #ffffff;
     border-bottom: 2px solid #1c1f26;
 }
 
 #workspaces {
-    padding: 5px;
+    padding: 1px;
 }
 
 #workspaces button {
@@ -18,11 +18,17 @@ window#waybar {
     background: transparent;
     padding: 5px;
     margin: 2px;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 #workspaces button.active {
-    background: #5294e2;
+    /* background: #285577; */
+    background: #3c3f4a;
+}
+
+#workspaces button:hover {
+    /* background: #285577; */
+    border-color: #fff;
 }
 
 #window {
@@ -31,7 +37,7 @@ window#waybar {
 
 #clock, #battery, #cpu, #memory, #network {
     padding: 5px 10px;
-    background: #3c3f4a;
+    /* background: #3c3f4a; */
     margin: 2px;
     border-radius: 5px;
 }
@@ -59,23 +65,10 @@ window#waybar {
     color: #e06c75;
 }
 
-#custom-media {
+/* spotify */
+#custom-media { 
     padding: 5px 10px;
-    background: #3c3f4a;
+    /* background: #3c3f4a; */
     margin: 2px;
     border-radius: 5px;
-    color: #f9e2af;
 }
-
-#custom-microphone {
-    padding: 5px 10px;
-    background: #3c3f4a;
-    margin: 2px;
-    border-radius: 5px;
-    color: #e06c75;
-}
-
-#custom-microphone.MUTE {
-    color: #e06c75; /* Red color for muted */
-}
-

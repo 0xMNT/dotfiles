@@ -1,10 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 20,
+  "height": 14,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["custom/media"],
-  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "custom/microphone", "clock"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "clock#date", "clock#time"],
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -16,8 +16,20 @@
     "max-length": 50
   },
 
+  "clock#date": {
+    "interval": 20,
+    "format": "{:%e %b %Y}",
+    "tooltip": false
+  },
+
+  "clock#time": {
+    "interval": 10,
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+
   "clock": {
-    "format": "{:%Y-%m-%d %H:%M:%S}"
+    "format": "{:%d.%m.%Y %H:%M}"
   },
 
   "battery": {
@@ -48,22 +60,12 @@
   },
 
   "custom/media": {
-    "exec": "playerctl metadata --format '{\"text\": \"🎵 {{artist}} - {{title}}\"}' || echo '{\"text\": \"\", \"tooltip\": false}'",
+    "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' || echo '{\"text\": \"\", \"tooltip\": false}'",
     "return-type": "json",
     "interval": 1,
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
-
-  "custom/microphone": {
-    "exec": "pactl list sources | grep -e 'Name' -e 'Mute' | awk '/Mute/ {print $2}' | head -n 1 | jq -R '{ \"text\": . }' || echo '{\"text\": \"🎤 No Mic\"}'",
-    "return-type": "json",
-    "interval": 1,
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-    "format": "🎤 {text}",
-    "format-muted": "🎤 MUTE"
-  },
-
 }
 
