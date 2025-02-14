@@ -13,7 +13,6 @@ alias l="ls -lah"
 alias lt="ls -Ta"
 alias tree="ls -Ta"
 
-alias s="systemctl"
 alias sd="shutdown now"
 
 alias k="kubectl"
@@ -35,8 +34,8 @@ alias ns="kubens"
 
 alias kc="kccon \$(kccon | tr '*' ' ' | egrep -v 'NAME' | awk '{print \$1}' | fzf)"
 
-# alias k9s="k9s --kubeconfig /etc/k8s/config -c pods"
-alias k9s="k9s -c namespace"
+alias k9s="k9s --kubeconfig /etc/k8s/config -c pods"
+# alias k9s="k9s -c namespace"
 
 alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
 
