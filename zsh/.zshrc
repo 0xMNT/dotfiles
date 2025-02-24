@@ -138,6 +138,10 @@ source ~/.aliases
 source ~/.exports
 source ~/.sources
 
+if [ -f ~/.custom_aliases ]; then
+  source ~/.custom_aliases
+fi
+
 # Check if .env file exists in the current directory and source it
 if [ -f ~/.env ]; then
   export $(grep -v '^#' ~/.env | xargs)

@@ -11,7 +11,7 @@ alias py="python3"
 alias ls="eza --group-directories-first --icons=always $@"
 alias l="ls -lah"
 alias lt="ls -Ta"
-alias tree="ls -Ta"
+alias tree="ls -T"
 
 alias sd="shutdown now"
 
