@@ -125,6 +125,9 @@ source $ZSH/oh-my-zsh.sh
 # krew path
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# istio path
+export PATH=$HOME/.istioctl/bin:$PATH
+
 # change lualine config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
