@@ -131,7 +131,6 @@ export PATH=$HOME/.istioctl/bin:$PATH
 # change lualine config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-source ~/.env
 
 # Editor
 export EDITOR="nvim"
@@ -143,11 +142,6 @@ source ~/.sources
 
 if [ -f ~/.custom_aliases ]; then
   source ~/.custom_aliases
-fi
-
-# Check if .env file exists in the current directory and source it
-if [ -f ~/.env ]; then
-  export $(grep -v '^#' ~/.env | xargs)
 fi
 
 PROMPT='$(kube_ps1)'$PROMPT
