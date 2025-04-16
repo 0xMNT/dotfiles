@@ -900,3 +900,6 @@ vim.keymap.set('n', 'Q', '<nop>')
 -- run lua code
 vim.keymap.set('n', '<leader>w', ':w <CR> :vsp | term lua %<CR>', { desc = 'Run Lua File in Split Terminal' })
 vim.keymap.set('n', '<leader>r', ':w <CR> :vsp | term love .<CR>', { desc = '[R]un Love2d File in Split Terminal' })
+
+-- close all buffers
+vim.api.nvim_set_keymap('n', '<leader>q', ':bufdo bd<CR>', { noremap = true, silent = true })
