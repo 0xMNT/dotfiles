@@ -11,6 +11,7 @@ compinit
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
 export BAT_THEME="TwoDark"
+export PATH=/usr/pgsql-17/bin:$PATH
 
 # Tmux attach
 # tmux attach session

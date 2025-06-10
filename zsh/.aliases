@@ -36,7 +36,7 @@ alias kc="kccon \$(kccon | tr '*' ' ' | egrep -v 'NAME' | awk '{print \$1}' | fz
 
 alias cnpga=" for cluster in \$(k get cluster -A | egrep -v "NAMESPACE" | awk '{print \$1}'); do echo --- \$cluster-cluster --- && kubectl cnpg status \$cluster-cluster -n \$cluster; done;"
 
-alias k9s="k9s --kubeconfig /etc/k8s/config -c pods"
+alias k9s="k9s --kubeconfig /etc/k8s/config"
 # alias k9s="k9s -c namespace"
 
 alias pd='kgpa --no-headers | grep -vE "Running|Completed"'
