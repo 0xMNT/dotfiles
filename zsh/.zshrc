@@ -136,6 +136,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Editor
 export EDITOR="nvim"
 
+# Ruby
+export PATH="/home/mnt/.local/share/gem/ruby/3.4.0/bin:$PATH"
+
+
 # source aliases at the end to override other aliases
 source ~/.aliases
 source ~/.exports
