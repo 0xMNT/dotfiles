@@ -4,6 +4,12 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.hidden = true
+vim.opt.confirm = true
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
