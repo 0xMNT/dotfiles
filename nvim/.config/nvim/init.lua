@@ -818,6 +818,7 @@ require('lazy').setup({
   require 'custom.plugins.neotree',
   require 'custom.plugins.colorscheme',
   require 'custom.plugins.oil',
+  require 'custom.plugins.gitsigns',
   require 'custom.plugins.noice',
   require 'custom.plugins.lualine',
   require 'custom.plugins.lazygit-nvim',
