@@ -45,8 +45,6 @@ alias tk="tmux kill-session -t \$(tmux ls |awk -F: '{print \$1}' | fzf)"
 
 alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest --annotations="sidecar.istio.io/inject=false" -- sh -c "apk add --no-cache bash curl busybox-extras bind-tools nmap postgresql openldap-clients && bash"'
 
-alias bar="flatpak run info.beyondallreason.bar"
-
 alias cpu="kubectl top pods --all-namespaces | sort -k3 -nr | head -20"
 alias mem="kubectl top pods --all-namespaces | sort -k4 -nr | head -20"
 
