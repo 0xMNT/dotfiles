@@ -40,8 +40,11 @@
   },
 
   "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": " Muted",
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
     "on-click": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5"

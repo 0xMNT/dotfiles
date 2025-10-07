@@ -1,11 +1,13 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 42,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["custom/media"],
-  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "network", "clock#date", "clock#time"],
-
+  "height": 14,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/media"
+  ],
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "hyprctl dispatch workspace {name}",
@@ -33,32 +35,55 @@
   "memory": {
     "format": "RAM: {}%"
   },
-
   "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": " Muted",
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
     "on-click": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",
     "on-scroll-down": "pamixer -d 5"
   },
   "custom/media": {
-    "exec": "playerctl metadata --format '{{artist}} - {{title}}' || echo ''",
-    "return-type": "text",
+    "exec": "playerctl metadata --format '{\"text\": \"{{artist}} - {{title}}\"}' || echo '{\"text\": \"\", \"tooltip\": false}'",
+    "return-type": "json",
     "interval": 1,
-    "markup": false,          // ← THIS disables GTK markup parsing
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
   },
-
-  "network": {
-  "interface": "wlan0",
-  "interval": 30,
-  "format-wifi": "{signalStrength}% ",
-  "format-disconnected": "Offline",
-  "tooltip-format-wifi": "{essid} — {ipaddr} ({signalStrength}%)",
-  "tooltip-format-disconnected": "Not connected",
-  "max-length": 40
+  "modules-right": [
+    "cpu",
+    "memory",
+    "battery",
+    "pulseaudio",
+    "network",
+    "clock#date",
+    "clock#time"
+  ],
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
   },
-
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}%",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-disconnected": "󰖪 Disconnected"
+  }
 }

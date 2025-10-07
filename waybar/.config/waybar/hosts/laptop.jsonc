@@ -1,8 +1,14 @@
 {
-  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "clock#date", "clock#time"],
+  "modules-right": ["cpu", "memory", "battery", "pulseaudio", "network", "clock#date", "clock#time"],
 
   "battery": {
     "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}%",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "format-disconnected": "󰖪 Disconnected"
   }
 }
