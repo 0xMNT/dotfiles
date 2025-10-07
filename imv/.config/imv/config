@@ -1,0 +1,5 @@
+[options]
+overlay = true
+overlay_font = JetBrainsMono Nerd Font:12
+overlay_text = $imv_current_file [$imv_current_index/$imv_file_count]
+fullscreen = true
