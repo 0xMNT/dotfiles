@@ -5,6 +5,8 @@ title = ""
 window-decoration = false
 
 keybind = ctrl+shift+k=reload_config
+keybind = ctrl+shift+left=unbind
+keybind = ctrl+shift+right=unbind
 
 confirm-close-surface = false
 mouse-hide-while-typing = true
