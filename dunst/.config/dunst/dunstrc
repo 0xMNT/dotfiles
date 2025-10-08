@@ -2,9 +2,9 @@
     monitor = 0
     follow = mouse
     width = 400
-    height = 60
+    height = (60, 60)
     origin = bottom-center
-    offset = 0x50
+    offset = (0, 50)
     scale = 0
     notification_limit = 1
 
