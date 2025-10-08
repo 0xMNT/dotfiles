@@ -1,5 +1,5 @@
 {
-  "modules-right": ["cpu", "memory", "pulseaudio", "network", "clock#date", "clock#time"],
+  "modules-right": ["cpu", "memory", "pulseaudio", "clock#date", "clock#time"],
 
   "network": {
     "format-wifi": "󰖩 {essid} ({signalStrength}%)",
