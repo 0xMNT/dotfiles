@@ -1,3 +1,4 @@
 systemd/.config/systemd/user/pipewire.service.wants/
 nvim/.config/lazy-lock.json
 nvim/.config/nvim/lazy-lock.json
+hypr/.config/hypr/host.conf
