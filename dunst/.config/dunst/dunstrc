@@ -6,7 +6,7 @@
     origin = bottom-center
     offset = (0, 50)
     scale = 0
-    notification_limit = 1
+    notification_limit = 2
 
     progress_bar = true
     progress_bar_height = 20
@@ -60,7 +60,7 @@
 	background = "#0D101B90"
     foreground = "#ffffff"
     frame_color = "#555555"
-    timeout = 3
+    timeout = 2
 
 [urgency_normal]
 	background = "#0D101B90"
