@@ -222,8 +222,8 @@ return {
           },
         },
         follow_current_file = {
-          enabled = false, -- This will find and focus the file in the active buffer every time
-          --               -- the current file is changed while the tree is open.
+          enabled = true, -- This will find and focus the file in the active buffer every time
+          --              -- the current file is changed while the tree is open.
           leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
         },
         group_empty_dirs = false, -- when true, empty folders will be grouped together
@@ -313,6 +313,27 @@ return {
         },
       },
     }
+
+    -- Auto-refresh neotree after git operations
+    vim.api.nvim_create_autocmd("User", {
+      pattern = "GitSignsUpdate",
+      callback = function()
+        local neo_tree = require("neo-tree.command")
+        if neo_tree then
+          neo_tree.execute({ action = "refresh" })
+        end
+      end,
+    })
+
+    -- Refresh on file write (when you save files)
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        local neo_tree = require("neo-tree.command")
+        if neo_tree then
+          neo_tree.execute({ action = "refresh" })
+        end
+      end,
+    })
   end,
   vim.keymap.set('n', '<Leader>e', '<Cmd>Neotree toggle<CR>'),
   vim.keymap.set('n', '<Leader>E', '<Cmd>Neotree reveal<CR>'),

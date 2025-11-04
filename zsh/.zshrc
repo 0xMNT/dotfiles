@@ -140,6 +140,7 @@ export EDITOR="nvim"
 
 # Ruby
 export PATH="/home/mnt/.local/share/gem/ruby/3.4.0/bin:$PATH"
+export PATH="/home/dcielenga/node_modules/.bin:$PATH"
 
 
 # source aliases at the end to override other aliases

@@ -48,3 +48,4 @@ alias debug='kubectl run -it --rm debug-pod-damian --image=alpine:latest --annot
 alias cpu="kubectl top pods --all-namespaces | sort -k3 -nr | head -20"
 alias mem="kubectl top pods --all-namespaces | sort -k4 -nr | head -20"
 
+alias nsh="kubectl node-shell \$(kubectl get nodes -o wide | awk 'NR>1 {print \$0}' | fzf | awk '{print \$1}')"
