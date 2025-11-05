@@ -12,7 +12,7 @@ config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" })
 config.font_size = 16
 config.enable_kitty_graphics = true
 
-config.window_decorations = "NONE"
+-- config.window_decorations = "NONE"
 config.window_padding = {
 	left = 0,
 	right = 0,
