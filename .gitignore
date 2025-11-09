@@ -3,3 +3,4 @@ nvim/.config/lazy-lock.json
 nvim/.config/nvim/lazy-lock.json
 hypr/.config/hypr/host.conf
 waybar/.config/waybar/config.jsonc
+bin/.local/bin/swayosd*
