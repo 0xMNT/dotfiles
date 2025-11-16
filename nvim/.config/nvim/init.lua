@@ -774,7 +774,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'python' },
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'python', 'yaml', 'json', 'dockerfile', 'terraform' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -823,6 +823,7 @@ require('lazy').setup({
   require 'custom.plugins.lualine',
   require 'custom.plugins.lazygit-nvim',
   require 'custom.plugins.notify',
+  require 'custom.plugins.helm',
   -- require 'custom.plugins.python_code_runner',
   require 'custom.plugins.auto-session',
 
@@ -857,7 +858,7 @@ require('lazy').setup({
 -- hide statusline
 -- vim.opt.laststatus = 0
 
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.g.lazygit_floating_window_scaling_factor = 1
 
 -- buffer
