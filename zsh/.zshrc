@@ -153,6 +153,14 @@ if [ -f ~/.custom_aliases ]; then
   source ~/.custom_aliases
 fi
 
+if [ -f ~/.laptop ]; then
+  source ~/.laptop
+fi
+
+if [ -f ~/.desktop ]; then
+  source ~/.desktop
+fi
+
 PROMPT='$(kube_ps1)'$PROMPT
 
 # Check if we are already inside a tmux session
