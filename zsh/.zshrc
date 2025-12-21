@@ -14,6 +14,13 @@ export BAT_THEME="TwoDark"
 export PATH=/usr/pgsql-17/bin:$PATH
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$HOME/node_modules/.bin:$PATH"
+export PATH="$PATH:/opt/flutter/bin"
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+
 
 
 # Tmux attach
