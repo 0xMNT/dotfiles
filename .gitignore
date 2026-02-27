@@ -6,3 +6,6 @@ hypr/.config/hypr/current_wallpaper
 hypr/.config/hypr/current_wallpaper_index
 waybar/.config/waybar/config.jsonc
 bin/.local/bin/swayosd*
+
+# large binaries
+bin/.local/bin/copilot
