@@ -23,3 +23,12 @@ profile laptop-only {
     output HDMI-A-1 disable
     exec pkill waybar; if pgrep -x sway > /dev/null; then waybar -c ~/.config/sway/waybar/config.jsonc -s ~/.config/sway/waybar/style.css & else waybar & fi
 }
+
+# USB-C dock or any other external monitor (assumes 4K @ scale 2 → 1080 logical height)
+# Adjust scale if the monitor is 1080p (use scale 1) or a different resolution
+profile docked-fallback {
+    output eDP-1 enable mode 1920x1080@60Hz position 0,1080 scale 1.25
+    output *     enable position 0,0 scale 2
+    exec pkill waybar; if pgrep -x sway > /dev/null; then waybar -c ~/.config/sway/waybar/config.jsonc -s ~/.config/sway/waybar/style.css & else waybar & fi
+    exec if pgrep -x sway > /dev/null; then ~/.config/sway/restore-wallpaper.sh; else ~/.config/hypr/restore-wallpaper.sh; fi
+}
