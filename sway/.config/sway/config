@@ -1,4 +1,4 @@
 # Main sway config
 # Host-specific config (monitors, input, startup) — symlinked by install.sh
 include ~/.config/sway/hosts/common.conf
-include ~/.config/sway/host.conf
+include ~/.config/sway/hosts/$(cat /etc/hostname).conf

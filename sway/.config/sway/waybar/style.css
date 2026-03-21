@@ -20,7 +20,8 @@ window#waybar {
     border-radius: 4px;
 }
 
-#workspaces button.active {
+#workspaces button.active,
+#workspaces button.focused {
     /* background: #285577; */
     background: #3c3f4a;
 }
