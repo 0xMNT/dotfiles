@@ -6,9 +6,6 @@ HOST_NAME=$(cat /etc/hostname)
 # Create symlink for Hyprland host-specific config
 ln -sf ~/.config/hypr/hosts/${HOST_NAME}.conf ~/.config/hypr/host.conf
 
-# Create symlink for Sway host-specific config
-ln -sf ~/.config/sway/hosts/${HOST_NAME}.conf ~/.config/sway/host.conf
-
 # Merge waybar configs
 ~/.config/waybar/merge-config.sh
 
