@@ -14,6 +14,7 @@ profile docked {
     output HDMI-A-1 enable mode 3840x2160@60Hz position 0,0 scale 2
     output eDP-1    enable mode 1920x1080@60Hz position 192,1080 scale 1.25
     exec pkill waybar; waybar &
+    exec ~/.config/hypr/restore-wallpaper.sh
 }
 
 # Laptop only: no external monitor connected
