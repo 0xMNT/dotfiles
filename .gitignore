@@ -10,3 +10,4 @@ bin/.local/bin/swayosd*
 # large binaries
 bin/.local/bin/copilot
 bin/.local/bin/claude
+claude/.claude
