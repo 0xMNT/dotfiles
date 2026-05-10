@@ -10,7 +10,7 @@ ln -sf ~/.config/hypr/hosts/${HOST_NAME}.conf ~/.config/hypr/host.conf
 ~/.config/waybar/merge-config.sh
 
 # packages
-sudo pacman -Syu grim slurp swawyosd wlsunset imv xdg-desktop-portal-wlr grim slurp wl-clipboard libnotify waybar swayidle kubectx ripgrep-all mpv jq yq tldr nushell argocd helm kubectl man github-cli aws-cli docker mangohud nvidia nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship libappindicator-gtk3 libdbusmenu-gtk3 libnl jsoncpp libsigc++ fmt chrono-date spdlog libnotify pamixer gdu kanshi sway swaylock xdg-desktop-portal-wlr ly
+sudo pacman -Syu grim slurp swawyosd wlsunset imv xdg-desktop-portal-wlr grim slurp wl-clipboard libnotify waybar swayidle kubectx ripgrep-all mpv jq yq tldr nushell argocd helm kubectl man github-cli aws-cli docker mangohud nvidia nvidia-utils lazygit fastfetch easyeffects zsh stow wezterm neovim tmux exa openssh firefox curl ripgrep make unzip gcc wget starship libappindicator-gtk3 libdbusmenu-gtk3 libnl jsoncpp libsigc++ fmt chrono-date spdlog libnotify pamixer gdu kanshi sway swaylock xdg-desktop-portal-wlr sddm
 
 # jetbrains mono nerd font
 mkdir-p $HOME/.fonts
@@ -30,6 +30,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 # add user to docker group
 sudo usermod -aG docker $USER
 newgrp docker
+
+# sddm autologin
+sudo mkdir -p /etc/sddm.conf.d
+sudo cp sddm/etc/sddm.conf.d/autologin.conf /etc/sddm.conf.d/autologin.conf
+sudo systemctl enable sddm
 
 # generate xconfig for nvidia driver
 sudo nvidia-xconfig
