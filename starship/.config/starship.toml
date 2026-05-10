@@ -1,4 +1,5 @@
 #🐢
+scan_timeout = 30
 [kubernetes]
 format = 'on [🐳 $context \($namespace\)](white) '
 disabled = false
