@@ -46,13 +46,8 @@ fi
 # Get wallpaper filename for notification
 WALLPAPER_NAME=$(basename "$WALLPAPER")
 
-# Write new hyprpaper config and restart
-HYPRPAPER_CONF="$HOME/.config/hyprpaper/hyprpaper.conf"
-mkdir -p "$(dirname "$HYPRPAPER_CONF")"
-printf 'preload = %s\nwallpaper = ,%s\nsplash = false\n' "$WALLPAPER" "$WALLPAPER" > "$HYPRPAPER_CONF"
-pkill hyprpaper 2>/dev/null
-sleep 0.3
-hyprctl dispatch exec hyprpaper
+hyprctl hyprpaper preload "$WALLPAPER"
+hyprctl hyprpaper wallpaper ",$WALLPAPER"
 
 # Send notification with current position
 notify-send "Wallpaper Changed" "$WALLPAPER_NAME ($((CURRENT_INDEX + 1))/${#WALLPAPERS[@]})" -t 2000
