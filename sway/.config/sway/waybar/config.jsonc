@@ -83,6 +83,7 @@
   "network": {
     "format-wifi": "󰖩 {signalStrength}%",
     "format-ethernet": "󰈀 {ipaddr}/{cidr}",
-    "format-disconnected": "󰖪 Disconnected"
+    "format-disconnected": "󰖪 Disconnected",
+    "on-click": "launch-wifi"
   }
 }
