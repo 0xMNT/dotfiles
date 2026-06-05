@@ -171,6 +171,12 @@ PROMPT='$(kube_ps1)'$PROMPT
 #   # Start a new tmux session or attach to an existing one
 #   tmux attach -t dotfiles || tmux new -s dotfiles
 # fi
+k9s() {
+    /usr/bin/k9s --kubeconfig /etc/k8s/config \
+        --context $(kubectl config current-context) \
+        --namespace $(kubectl config view --minify -o jsonpath='{..namespace}') \
+        "$@"
+}
 
 #source <(talosctl completion zsh)
 source <(kubectl completion zsh)
