@@ -334,6 +334,30 @@ return {
         end
       end,
     })
+
+    -- Suppress neo-tree cwd prompt for /tmp files opened by external tools (e.g. k9s)
+    vim.api.nvim_create_autocmd("BufEnter", {
+      pattern = "/tmp/*",
+      callback = function()
+        local ok, manager = pcall(require, "neo-tree.sources.manager")
+        if not ok then return end
+        local state = manager.get_state("filesystem")
+        if state and state.config and state.config.follow_current_file then
+          state.config.follow_current_file.enabled = false
+        end
+      end,
+    })
+    vim.api.nvim_create_autocmd({ "BufLeave", "BufDelete" }, {
+      pattern = "/tmp/*",
+      callback = function()
+        local ok, manager = pcall(require, "neo-tree.sources.manager")
+        if not ok then return end
+        local state = manager.get_state("filesystem")
+        if state and state.config and state.config.follow_current_file then
+          state.config.follow_current_file.enabled = true
+        end
+      end,
+    })
   end,
   vim.keymap.set('n', '<Leader>e', '<Cmd>Neotree toggle<CR>'),
   vim.keymap.set('n', '<Leader>E', '<Cmd>Neotree reveal<CR>'),
