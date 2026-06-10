@@ -1,6 +1,9 @@
 return {
   'nvim-neo-tree/neo-tree.nvim',
   branch = 'v3.x',
+  cond = function()
+    return not (vim.fn.argc() > 0 and tostring(vim.fn.argv(0)):match('^/tmp/'))
+  end,
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
@@ -331,30 +334,6 @@ return {
         local neo_tree = require("neo-tree.command")
         if neo_tree then
           neo_tree.execute({ action = "refresh" })
-        end
-      end,
-    })
-
-    -- Suppress neo-tree cwd prompt for /tmp files opened by external tools (e.g. k9s)
-    vim.api.nvim_create_autocmd("BufEnter", {
-      pattern = "/tmp/*",
-      callback = function()
-        local ok, manager = pcall(require, "neo-tree.sources.manager")
-        if not ok then return end
-        local state = manager.get_state("filesystem")
-        if state and state.config and state.config.follow_current_file then
-          state.config.follow_current_file.enabled = false
-        end
-      end,
-    })
-    vim.api.nvim_create_autocmd({ "BufLeave", "BufDelete" }, {
-      pattern = "/tmp/*",
-      callback = function()
-        local ok, manager = pcall(require, "neo-tree.sources.manager")
-        if not ok then return end
-        local state = manager.get_state("filesystem")
-        if state and state.config and state.config.follow_current_file then
-          state.config.follow_current_file.enabled = true
         end
       end,
     })
