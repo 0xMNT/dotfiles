@@ -2,7 +2,7 @@
 Version=1.0
 Name=ChatGPT
 Comment=ChatGPT by OpenAI
-Exec=brave --app=https://chatgpt.com --password-store=basic
+Exec=chromium --app=https://chatgpt.com --password-store=basic
 Icon=chatgpt
 Terminal=false
 Type=Application

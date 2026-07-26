@@ -2,7 +2,7 @@
 Version=1.0
 Name=Claude
 Comment=Claude AI by Anthropic
-Exec=brave --app=https://claude.ai --password-store=basic
+Exec=chromium --app=https://claude.ai --password-store=basic
 Icon=claude
 Terminal=false
 Type=Application
