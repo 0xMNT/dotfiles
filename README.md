@@ -20,18 +20,26 @@ Clone the repo into `$HOME` directory
 git clone https://github.com/0xMNT/dotfiles.git ~/dotfiles
 ```
 
-Run install script for `arch, btw` distro
+Run install script for `arch, btw` distro. It installs packages from
+`packages/pkglist.txt` (official repos) and `packages/pkglist-aur.txt` (AUR,
+via `yay`), stows all dotfiles into `$HOME`, and sets up host-specific config.
+Safe to re-run.
+
 ```bash
 ./install.sh
 ```
 
-### GNU stow
-Create symlinks with `stow`
+To refresh the package lists from the current machine after installing
+something new:
 
 ```bash
-stow */ # all dirs
+pacman -Qqen > packages/pkglist.txt   # official repo packages
+pacman -Qqem > packages/pkglist-aur.txt  # AUR / foreign packages
 ```
 
+### GNU stow
+`install.sh` already stows everything. To (re-)link a single config by hand:
+
 ```bash
-stow alacritty # for one config
+stow -R -t "$HOME" alacritty
 ```

@@ -1,0 +1,9 @@
+appimagetool-bin
+brave-bin
+kcc
+kindlegen
+simple-mtpfs
+system76-power
+tor-browser-bin
+webkit2gtk
+xf86-video-vmware
