@@ -4,12 +4,13 @@ command_timeout = 500
 
 [nodejs]
 disabled = true
+
 [kubernetes]
 format = 'on [🐳 $context \($namespace\)](white) '
 disabled = false
-contexts = [
-  { context_pattern = "dev.local.cluster.k8s", style = "white", symbol = "💔 " },
-]
+# contexts = [
+#   { context_pattern = "dev.local.cluster.k8s", style = "white", symbol = "💔 " },
+# ]
 
 [username]
 style_user = 'purple'
@@ -22,3 +23,8 @@ show_always = true
 ssh_only = false
 detect_env_vars = ['!TMUX', 'SSH_CONNECTION']
 disabled = false
+
+
+[terraform]
+symbol = " "
+format = 'via [$symbol$version $workspace]($style) '

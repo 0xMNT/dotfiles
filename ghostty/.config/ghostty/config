@@ -10,6 +10,8 @@ keybind = ctrl+shift+right=unbind
 keybind = alt+p=unbind
 keybind = ctrl+enter=unbind
 keybind = ctrl+shift+e=unbind
+keybind = alt+c=copy_to_clipboard
+keybind = alt+v=paste_from_clipboard
 
 confirm-close-surface = false
 mouse-hide-while-typing = true

@@ -176,4 +176,5 @@ PROMPT='$(kube_ps1)'$PROMPT
 source <(kubectl completion zsh)
 
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 export PATH="$HOME/.local/bin:$PATH"
