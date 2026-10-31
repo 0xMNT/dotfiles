@@ -2,7 +2,7 @@
 
 # Check current rotation state
 STATE_FILE="/tmp/hypr_rotation_state"
-CONFIG_FILE="$HOME/.config/hypr/hosts/laptop.conf"
+CONFIG_FILE="$HOME/.config/hypr/hosts/laptop.lua"
 
 if [ ! -f "$STATE_FILE" ] || [ "$(cat $STATE_FILE)" = "0" ]; then
     # Rotate to 90 degrees

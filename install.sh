@@ -70,11 +70,11 @@ stow -v -R -t "$HOME" "${stow_targets[@]}"
 
 # --- host-specific configs ---------------------------------------------------
 log "Linking Hyprland config for host: $HOST_NAME"
-if [[ -f "$HOME/.config/hypr/hosts/${HOST_NAME}.conf" ]]; then
-    ln -sf "$HOME/.config/hypr/hosts/${HOST_NAME}.conf" "$HOME/.config/hypr/host.conf"
+if [[ -f "$HOME/.config/hypr/hosts/${HOST_NAME}.lua" ]]; then
+    ln -sf "$HOME/.config/hypr/hosts/${HOST_NAME}.lua" "$HOME/.config/hypr/host.lua"
 else
-    echo "  No hosts/${HOST_NAME}.conf, falling back to common.conf" >&2
-    ln -sf "$HOME/.config/hypr/hosts/common.conf" "$HOME/.config/hypr/host.conf"
+    echo "  No hosts/${HOST_NAME}.lua, no host-specific config" >&2
+    printf "%s\n" "-- no host-specific config" > "$HOME/.config/hypr/host.lua"
 fi
 
 log "Merging waybar config for host: $HOST_NAME"
